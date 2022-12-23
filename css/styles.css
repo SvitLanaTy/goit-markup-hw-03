@@ -19,6 +19,10 @@ ul {
   padding-left: 0;
 }
 
+img {
+  display: block;
+}
+
 body {
   font-family: "roboto", sans-serif;
   color: #434455;
@@ -62,6 +66,7 @@ body {
 .header {
   padding-top: 24px;
   padding-bottom: 24px;
+  border-bottom: 1px solid #e7e9fc;
 }
 
 .header-nav {
@@ -101,7 +106,7 @@ body {
 .header-item {
 }
 .header-link {
-  font-weight: 700;
+  font-weight: 500;
   font-size: var(--main-font-size);
   line-height: 1.5;
   letter-spacing: var(--typical-letter-spacing);
@@ -138,31 +143,42 @@ body {
 
 /*-------Hero--------*/
 
+/* .hero > .container {
+  display: flex;
+} */
+
 .hero {
   background-color: #2e2f42;
+  text-align: center;
   padding-top: 188px;
   padding-bottom: 188px;
 }
 .hero-title {
+  width: 494;
+  height: 120;
   font-size: 56px;
   line-height: 1.07;
-  text-align: center;
   letter-spacing: var(--typical-letter-spacing);
   color: #ffffff;
+  margin-top: 0;
   margin-bottom: 48px;
 }
 
 .hero-button {
+  display: inline-block;
+  min-width: 169px;
+  height: 56px;
   font-family: inherit;
-  font-weight: 700;
+  font-weight: 500;
   font-size: var(--main-font-size);
-  line-height: 1.19;
-  display: flex;
+  line-height: 1.5;
   align-items: center;
   letter-spacing: 0.04em;
   color: #ffffff;
   background-color: var(--first-background-color-button);
   cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 .hero-button:hover,
@@ -184,10 +200,13 @@ body {
 }
 
 .features-list {
+  display: flex;
+  gap: 24px;
 }
 .list {
 }
 .features-iteam {
+  max-width: 264px;
 }
 .features-title {
   font-size: 20px;
@@ -218,10 +237,14 @@ body {
   margin-bottom: 72px;
 }
 .works-list {
+  display: flex;
+  gap: 24px;
 }
+
 .list {
 }
 .works-item {
+  width: calc((100% - 48px) / 3);
 }
 
 /*-------Team--------*/
@@ -240,12 +263,24 @@ body {
   margin-bottom: 72px;
 }
 .team-list {
+  display: flex;
+  gap: 24px;
 }
+
+.description {
+  /* display: flex;
+  flex-wrap: wrap; */
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
 .list {
 }
 .team-item {
   background-color: #ffffff;
-  margin-bottom: 32px;
+  width: calc((100% - 72px) / 4);
 }
 .team-subtitle {
   font-size: 20px;
@@ -254,6 +289,7 @@ body {
   letter-spacing: var(--typical-letter-spacing);
   color: var(--section-title-color);
   margin-bottom: 8px;
+  margin-top: 0;
 }
 .team-text {
   font-size: var(--main-font-size);
@@ -289,6 +325,7 @@ body {
   line-height: var(--typical-line-height);
   letter-spacing: var(--typical-letter-spacing);
   color: #e7e9fc;
+  max-width: 264px;
 }
 
 /*-------Portfolio--------*/
